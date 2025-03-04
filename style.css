@@ -1,3 +1,7 @@
+img {
+    max-width: 100%;  /* Ensures images don’t exceed their container */
+    height: auto;  /* Keeps the aspect ratio */
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
