@@ -1,6 +1,6 @@
-/* Ensures all images fit properly */
+/* Global Image Styling */
 img {
-    max-width: 100%;  /* Prevents images from exceeding their container */
+    max-width: 100%;  /* Ensures images do not exceed their container */
     height: auto;  /* Maintains aspect ratio */
     display: block;
     margin: auto;
@@ -84,6 +84,46 @@ nav ul li a {
     margin-top: 10px;
 }
 
+/* About Section */
+#about img {
+    content: url('about-image.jpg');
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Services Section */
+#services img {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+#services img:nth-child(1) { content: url('construction.jpg'); }
+#services img:nth-child(2) { content: url('electrical.jpg'); }
+#services img:nth-child(3) { content: url('solar.jpg'); }
+#services img:nth-child(4) { content: url('hvac.jpg'); }
+
+/* Projects Section */
+#projects img {
+    content: url('projects.jpg');
+    width: 80%;
+    max-width: 800px; /* Slightly larger for project showcase */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Contact Section */
+#contact img {
+    content: url('contact.jpg');
+    width: 60%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
 /* Section Styling */
 section {
     padding: 50px;
@@ -92,16 +132,6 @@ section {
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-}
-
-/* Image Styling for Sections */
-section img {
-    width: 80%; /* Ensures images are responsive */
-    max-width: 600px; /* Restricts oversized images */
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    display: block;
 }
 
 /* Footer Styling */
