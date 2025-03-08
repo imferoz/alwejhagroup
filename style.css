@@ -1,7 +1,7 @@
 /* Global Image Styling */
 img {
-    max-width: 100%;  /* Ensures images do not exceed their container */
-    height: auto;  /* Maintains aspect ratio */
+    max-width: 100%;
+    height: auto;
     display: block;
     margin: auto;
 }
@@ -54,13 +54,13 @@ nav ul li a {
     background: url('hero-image.jpg') no-repeat center center/cover;
     color: white;
     position: relative;
-    max-height: 500px; /* Restricts hero section height */
+    max-height: 500px;
 }
 
 .hero img {
     width: 100%;
     max-height: 500px;
-    object-fit: cover; /* Ensures the image scales properly */
+    object-fit: cover;
 }
 
 /* Hero Text Styling */
@@ -93,11 +93,20 @@ nav ul li a {
     border-radius: 10px;
 }
 
-/* Services Section */
+/* Services Section - Using Grid Layout */
+#services .image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
 #services img {
-    width: 80%;
-    max-width: 600px;
-    height: auto;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -106,12 +115,18 @@ nav ul li a {
 #services img:nth-child(3) { content: url('solar.jpg'); }
 #services img:nth-child(4) { content: url('hvac.jpg'); }
 
-/* Projects Section */
+/* Projects Section - Using Grid Layout */
+#projects .image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
 #projects img {
-    content: url('projects.jpg');
-    width: 80%;
-    max-width: 800px; /* Slightly larger for project showcase */
-    height: auto;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -141,4 +156,24 @@ footer {
     text-align: center;
     padding: 15px;
     margin-top: 20px;
+}
+
+/* Responsive Design Fix */
+@media (max-width: 768px) {
+    .hero {
+        padding: 30px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    #services .image-container, 
+    #projects .image-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
 }
